@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hereditariedade</title>
+    <style>
+        div.container{
+            padding: 0;
+        }
+        *{
+            user-select: none;
+        }
+        table{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2em;
+            border-spacing: 0px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-180%) translateY(-50%) rotateZ(50deg);
+            transition: .5s;
+        }
+        td{
+            border: 1px solid black;
+            /*border-right: 1px solid black;*/
+            padding: 0;
+            margin: 2px;
+            width: 60px;
+            height: 60px;
+        }
+        svg{
+            margin-bottom: 0;
+            padding: 0;
+        }
+        .line{
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            width: 0px;
+            height: 2px;
+            background-color: black;
+            top: 100%;
+            left: 0px;
+            transform: rotateZ(45deg);
+        }
+        td>span{
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+        .ceil{
+            width: 170px;
+        }
+        .clicavel{
+            cursor: pointer;
+        }
+        .svgcontainer > img{
+            display: inline-block;
+            padding: 0; 
+            display: flex;           
+        }
+        .botao{
+            background-color: rgb(91, 91, 201);
+            display: fixed;
+            position: absolute;
+            color: #ffffff;
+            max-width: 100px;
+            width: 22%;
+            padding: 5px 0;
+            font-size: 1.2em;
+            border-radius: 30px;
+            transform: translateY(-150%) translateX(-120%);
+        }
+        .botao{
+            text-align: center;
+            top: 20px;
+            transition: left .3s;
+        }
+    </style>
+</head>
+<body onload="animation()">
+    <div class="container">
+        <table>
+            <tr>
+                <td class="svgcontainer">
+                    <!-- <span class="line">
+
+                    </span> -->
+                    <img src="ex.svg" alt="">
+                </td>
+                <td class="ceil clicavel">
+                    <span>a</span>
+                </td>
+                <td class="ceil clicavel">
+                    <span>a</span>
+                </td>
+            </tr>
+            <tr class="line2">
+                
+                <td class="clicavel"><span>A</span></td>
+                <td class="editaveis" ><span>Aa</span></td>
+                <td class="editaveis" ><span>Aa</span></td>
+            </tr>
+            <tr class="line3">
+                
+                <td class="clicavel"><span>A</span></td>
+                <td class="editaveis"><span>Aa</span></td>
+                <td class="editaveis"><span>Aa</span></td>
+            </tr>
+        </table>
+        <div class="botao">
+            Próximo
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+
+    
+
+</body>
+</html>
